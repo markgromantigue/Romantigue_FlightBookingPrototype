@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Search Flight | EPAL express</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body data-spy="scroll" data-target=".nav-item">
+      <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+          <div class="backButtonSmall">
+              <img src="images/backButtonNoText.PNG" width="50">
+          </div>
+        <a class="navbar-brand" href="#" id="logoAfter">
+          <img src="images/logo.png" height="50" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <div class="navButtons">
+                  <span class="oi oi-location navIcon"></span><br>
+                  Book
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-briefcase navIcon"></span><br>
+                      Check in
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-spreadsheet navIcon"></span><br>
+                      Status
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-person navIcon"></span><br>
+                      Profile
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-calendar navIcon"></span><br>
+                      Trips
+                    </div>
+                  </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        
+        <img src="images/logo.png" id="mobileLogo" alt="">
+
+              <div class="backButton" style="margin-top: 10px;">
+                <img src="images/backButtonWithText.PNG" width="90">
+            </div>
+        <div class="tripSummaryHeader" style="vertical-align: top; padding: 30px 0px 30px 0px;">
+          <h3><b>Trip Summary</b></h3>
+        </div>
+
+        <!-- <div id="trip-top" class="card rounded-top">
+            <a href="#" id="oneWay">
+              <div id="leftOption">
+                <div class="alignLeftTab">
+                  <span>One way</span>
+                </div>
+                <div class="alignRightTab"></div>
+              </div>  
+            </a>
+            <a href="#" id="return">
+              <div id="rightOps">
+                <center id="rightOption" class="active-tab" style="height: 100%;">
+                <div class="alignRightTab"></div>
+                <div class="alignRightTab">
+                  <span>Return</span>
+                </div>
+              </center>
+              </div>
+            </a>
+          </div> -->
+        <div id="trip-item" class="card rounded-top">
+            <div class="card-header">
+                Flight details
+              </div>
+              <div class="alignLeftDepartureTime">
+                <h4 class="gray-text text-nowrap">19:50</h4>
+                <span class="smallOrigin">MNL</span>
+              </div>
+              <div class="alignCenterDepartureTime">
+                  <span style="font-size: 12px;">2h 15m</span>
+                  <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+                </div>
+              <div class="alignRightDepartureTime">
+                <h4 class="gray-text text-nowrap">21:05</h4>
+                <span class="smallDestination">BCD</span>
+              </div>
+        </div>
+        <div id="trip-item" class="card rounded-top">
+            <div class="card-header">
+                Totals and Taxes
+              </div>
+              <table border="1" cellpadding="2" width="100%">
+                <tr>
+                  <td>Base Fare</td>
+                  <td>PHP 4,896</td>
+                </tr>
+                <tr>
+                    <td>Taxes, Fees & Charges</td>
+                    <td>PHP 1,472</td>
+                </tr>
+                <tr>
+                    <td>Total amount per person</td>
+                    <td>PHP 6,368</td>
+                </tr>
+                <tr>
+                    <td>Adult x 1</td>
+                    <td>PHP 11,896</td>
+                </tr>
+              </table>
+        </div>
+        <div id="trip-bottom" class="card rounded-top">
+              <div class="alignLeftDepartureTime" style="padding-left: 10%;">
+                <h4 class="gray-text text-nowrap">Total</h4>
+              </div>
+              <div class="alignCenterDepartureTime" style="width: 20%">
+                </div>
+              <div class="alignRightDepartureTime">
+                <h4 class="gray-text text-nowrap">PHP 11,896</h4>
+              </div>
+        </div>
+        
+        <div class="outsideButton">
+            <a href="#" id="actionButton" class="btn btn-danger w-100 rounded">Book</a>
+          </div>
+      
+
+        <script src="js/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

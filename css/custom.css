@@ -70,6 +70,19 @@ body{
     background: rgba(255, 255, 255, 0.7);
 }
 
+#trip-top{
+    display: block;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: 40px;
+    min-width: 320px;
+    min-height: 40px;
+    border-radius: 10px 10px 0px 0px !important;
+    background: rgba(255, 255, 255, 0.7);
+}
+
 #searchresult-top{
     display: block;
     top: 5px;
@@ -107,6 +120,32 @@ body{
     min-width: 290px;
     min-height: 100px;
     border-radius: 0px 0px 0px 0px !important;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#trip-item{
+    display: block;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: 165px;
+    min-width: 320px;
+    min-height: 100px;
+    border-radius: 0px 0px 0px 0px !important;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#trip-bottom{
+    display: block;
+    top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: 70px !important;
+    min-width: 320px;
+    min-height: 60px;
+    border-radius: 0px 0px 10px 10px !important;
     background: rgba(255, 255, 255, 0.7);
 }
 
@@ -166,6 +205,14 @@ body{
     width: 10%;
 }
 
+.tripSummaryHeader{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40%;
+}
+
 @media only screen and (max-width: 575px) {
     #navBar {
       opacity: 0;
@@ -217,7 +264,21 @@ body{
         margin: 0px !important;
 
     }
+    
     #searchcard-top{
+        display: block;
+        top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        height: 40px;
+        min-width: 320px;
+        min-height: 40px;
+        border-radius: 10px 10px 0px 0px !important;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    #trip-top{
         display: block;
         top: 5px;
         margin-left: auto;
@@ -370,19 +431,19 @@ body{
         opacity: 1;
     }
     .backButton{
+        display: none !important;
         position: absolute;
         font-size: 35px;
         margin-left: 5px;
-        opacity: 0 !important;
     }
     
     .backButton:hover{
+        display: none !important;
         background-color: rgba(255, 255, 255, 0.363);
         border-radius: 10px;
         position: absolute;
         font-size: 35px;
         margin-left: 5px;
-        opacity: 0 !important;
     }
 
     .backButtonSmall{
