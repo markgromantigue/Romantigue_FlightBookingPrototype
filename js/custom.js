@@ -185,3 +185,102 @@ $('.flightClass').on('click', function(e){
     $('.flightClass').removeClass('active-link');
     $(this).addClass('active-link');
 });
+
+$('#loginButton').on('click', function(e){
+    var empty = true;
+    if($('input[type="text"]').val()!="" && $('input[type="password"]').val()!=""){
+        empty =false;
+    }
+    if(empty == true){
+        e.preventDefault();
+        $('#invalidLogin').show();
+        console.log("true");
+    }else{
+        $('#invalidLogin').hide();
+        $('#loadingModal').modal({
+            keyboard: false
+          })
+          setTimeout(function(){ 
+            window.location.replace("searchFlight.html");
+        }, 1000);  
+          
+    }
+});
+
+$('#searchFlightButton').on('click', function(e){
+    if($("#toFull").text().includes("Select")){
+        console.log("sdsdfsdf");
+        e.preventDefault();
+        $('#pleaseSelect').modal({
+            keyboard: false
+          })
+    }else{
+        $('#loadingModal').modal({
+            keyboard: false
+          })
+          setTimeout(function(){ 
+            window.location.replace("flightResults.html");
+        }, 2000);  
+          
+    }
+});
+
+$('#backToSearch').on('click', function(e){
+    window.location.replace("searchFlight.html");
+});
+
+$('#backToSearchFull').on('click', function(e){
+    window.location.replace("searchFlight.html");
+});
+
+$('.flightResultItem').on('click', function(e){
+    window.location.replace("tripSummary.html");
+});
+
+$('#backToFlightResultFull').on('click', function(e){
+    window.location.replace("flightResults.html");
+});
+
+$('#backToFlightResult').on('click', function(e){
+    window.location.replace("flightResults.html");
+});
+
+$('#bookButton').on('click', function(e){
+    window.location.replace("makePayment.html");
+});
+
+$('#backToTripSummaryFull').on('click', function(e){
+    window.location.replace("tripSummary.html");
+});
+
+$('#backToTripSummary').on('click', function(e){
+    window.location.replace("tripSummary.html");
+});
+
+$('#makePaymentButton').on('click', function(e){
+    var filledUp = true;
+    var inputs = document.getElementsByTagName("input");
+    for ( var i = 0; i < inputs.length; i += 1 ) {
+        console.log(inputs[i].value);
+        if (inputs[i].value == '') { // check if value is empty
+            filledUp = false;
+            break; // stop the function
+        }
+
+    }
+    if(!filledUp){
+        console.log("sdsdfsdf");
+        e.preventDefault();
+        $('#fillUp').modal({
+            keyboard: false
+          })
+    }else{
+        $('#purchaseSuccessful').modal({
+            keyboard: false
+          })
+          setTimeout(function(){ 
+            window.location.replace("myTrips.html");
+        }, 2000);  
+          
+    }
+});

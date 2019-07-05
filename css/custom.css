@@ -123,6 +123,11 @@ body{
     background: rgba(255, 255, 255, 0.7);
 }
 
+#searchresult-item:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
 #trip-item{
     display: block;
     top: 5px;
@@ -494,6 +499,38 @@ body{
 }
 
 #actionButton{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#makePaymentButton{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#bookButton{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#searchFlightButton{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#loginButton{
     margin-top: 25px;
     margin-bottom: 10px;
     border-radius: 50px !important;

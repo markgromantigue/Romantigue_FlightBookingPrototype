@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Trip Summary | EPAL express</title>
+        <title>My trips | EPAL express</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="css/datepicker.css">
@@ -10,16 +10,13 @@
     </head>
     <body data-spy="scroll" data-target=".nav-item">
       <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
-          <div class="backButtonSmall">
-              <img src="images/backButtonNoText.PNG" width="50">
-          </div>
         <a class="navbar-brand" href="#" id="logoAfter">
           <img src="images/logo.png" height="50" alt="">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link active" href="searchFlight.html">
                 <div class="navButtons">
                   <span class="oi oi-location navIcon"></span><br>
                   Book
@@ -64,11 +61,8 @@
         
         <img src="images/logo.png" id="mobileLogo" alt="">
 
-              <div class="backButton" style="margin-top: 10px;">
-                <img src="images/backButtonWithText.PNG" width="90">
-            </div>
         <div class="tripSummaryHeader" style="vertical-align: top; padding: 30px 0px 30px 0px;">
-          <h3><b>Trip Summary</b></h3>
+          <h3><b>My Trips</b></h3>
         </div>
 
         <!-- <div id="trip-top" class="card rounded-top">
@@ -141,10 +135,54 @@
                 <h4 class="gray-text text-nowrap">PHP 11,896</h4>
               </div>
         </div>
-        
-        <div class="outsideButton">
-            <a href="#" id="actionButton" class="btn btn-danger w-100 rounded">Book</a>
-          </div>
+
+        <nav class="navbar fixed-bottom navbar-expand navbar-light bg-light" id="navbar-bottom">
+            <div class="navbar-collapse collapse">
+
+                <ul class="navbar-nav w-100 justify-content-center px-3" id="navClass">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="searchFlight.html">
+                          <div class="navButtons">
+                            <span class="oi oi-location navIcon"></span><br>
+                            Book
+                          </div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-briefcase navIcon"></span><br>
+                                Check&nbsp;in
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-spreadsheet navIcon"></span><br>
+                                Status
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-person navIcon"></span><br>
+                                Profile
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-calendar navIcon"></span><br>
+                                Trips
+                              </div>
+                            </a>
+                      </li>
+                </ul>
+            </div>
+        </nav>
       
 
         <script src="js/jquery-3.4.1.slim.min.js"></script>

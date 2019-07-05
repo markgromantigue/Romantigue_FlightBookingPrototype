@@ -33,7 +33,10 @@
                             </div>
                             <input type="password" name="" class="form-control input_pass" value="" placeholder="Password">
                         </div>
-                        <a href="#" id="actionButton" class="btn btn-danger w-100 rounded">Login</a>
+                        <div class="invalid-feedback" id="invalidLogin">
+                            Please enter your username and password
+                          </div>
+                        <a href="#" id="loginButton" class="btn btn-danger w-100 rounded">Login</a>
                         <div id="registerLink">
                             <a href="#" id="registerLink"><b><h6>Register Now</h6></b></a>
                         </div>  
@@ -41,8 +44,24 @@
             </div>
         </div>
 
+          <!-- Modal -->
+            <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
         <script src="js/jquery-3.4.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
     </body>
 </html>
