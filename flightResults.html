@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Search Flight | EPAL express</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body data-spy="scroll" data-target=".nav-item">
+      <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+          <div class="backButtonSmall">
+              <img src="images/backButtonNoText.PNG" width="50">
+          </div>
+        <a class="navbar-brand" href="#" id="logoAfter">
+          <img src="images/logo.png" height="50" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <div class="navButtons">
+                  <span class="oi oi-location navIcon"></span><br>
+                  Book
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-briefcase navIcon"></span><br>
+                      Check in
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-spreadsheet navIcon"></span><br>
+                      Status
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-person navIcon"></span><br>
+                      Profile
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-calendar navIcon"></span><br>
+                      Trips
+                    </div>
+                  </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        
+        <img src="images/logo.png" id="mobileLogo" alt="">
+
+        <div id="fromPlace" style="padding-top: 10px;">
+              <div class="backButton">
+                <img src="images/backButtonWithText.PNG" width="90">
+            </div>
+              <div class="alignLeftResult">
+                From
+                <h2 id="fromAbbr" class="gray-text">PHL</h2>
+                <h6 id="fromFull" class="gray-text">Philippines</h6>
+              </div>
+        </div>
+        <div class="arrowIndicator" style="vertical-align: top; padding-top: 30px;">
+          <span class="oi oi-arrow-right"></span><br>
+          <span class="oi oi-arrow-left" id="left-arrow-return"></span>
+        </div>
+        <div id="toPlace">
+            <div class="alignRight">
+                To
+                <h2 id="toAbbr" class="gray-text">...</h2>
+                <h6 id="toFull" class="gray-text">Select&nbsp;one</h6>
+            </div>
+        </div>
+
+        <div id="searchresult-top" class="card rounded-top">
+          <center>
+            <div id="resultHeader">
+              <h6 style="margin: 0px !important; padding-top: 4px;">30 May</h6>
+              <h6 style="margin: 0px !important; font-size: 13px;">Thu</h6>
+              <h6 style="margin: 0px !important; font-size: 13px;">PHP 8,000</h6>
+            </div>
+          </center>
+        </div>
+        <div id="searchresult-item" class="card rounded-top">
+              <div class="alignLeftDepartureTime">
+                <h4 class="gray-text text-nowrap">19:50</h4>
+                <span class="smallOrigin">MNL</span>
+              </div>
+              <div class="alignCenterDepartureTime">
+                  <span style="font-size: 12px;">2h 15m</span>
+                  <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+                </div>
+              <div class="alignRightDepartureTime">
+                <h4 class="gray-text text-nowrap">21:05</h4>
+                <span class="smallDestination">BCD</span>
+              </div>
+        </div>
+        <div id="searchresult-item" class="card rounded-top">
+            <div class="alignLeftDepartureTime">
+              <h4 class="gray-text text-nowrap">19:25</h4>
+              <span class="smallOrigin">MNL</span>
+            </div>
+            <div class="alignCenterDepartureTime">
+                <span style="font-size: 12px;">1h 10m</span>
+                <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+              </div>
+            <div class="alignRightDepartureTime">
+              <h4 class="gray-text text-nowrap">06:50</h4>
+              <span class="smallDestination">BCD</span>
+            </div>
+      </div>
+      <div id="searchresult-item" class="card rounded-top">
+          <div class="alignLeftDepartureTime">
+            <h4 class="gray-text text-nowrap">21:15</h4>
+            <span class="smallOrigin">MNL</span>
+          </div>
+          <div class="alignCenterDepartureTime">
+              <span style="font-size: 12px;">1h 40m</span>
+              <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+            </div>
+          <div class="alignRightDepartureTime">
+            <h4 class="gray-text text-nowrap">06:30</h4>
+            <span class="smallDestination">BCD</span>
+          </div>
+    </div>
+    <div id="searchresult-item" class="card rounded-top">
+        <div class="alignLeftDepartureTime">
+          <h4 class="gray-text text-nowrap">19:50</h4>
+          <span class="smallOrigin">MNL</span>
+        </div>
+        <div class="alignCenterDepartureTime">
+            <span style="font-size: 12px;">2h 15m</span>
+            <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+          </div>
+        <div class="alignRightDepartureTime">
+          <h4 class="gray-text text-nowrap">21:05</h4>
+          <span class="smallDestination">BCD</span>
+        </div>
+  </div>
+  <div id="searchresult-item" class="card rounded-top">
+      <div class="alignLeftDepartureTime">
+        <h4 class="gray-text text-nowrap">19:25</h4>
+        <span class="smallOrigin">MNL</span>
+      </div>
+      <div class="alignCenterDepartureTime">
+          <span style="font-size: 12px;">1h 10m</span>
+          <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+        </div>
+      <div class="alignRightDepartureTime">
+        <h4 class="gray-text text-nowrap">06:50</h4>
+        <span class="smallDestination">BCD</span>
+      </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+    <div class="alignLeftDepartureTime">
+      <h4 class="gray-text text-nowrap">21:15</h4>
+      <span class="smallOrigin">MNL</span>
+    </div>
+    <div class="alignCenterDepartureTime">
+        <span style="font-size: 12px;">1h 40m</span>
+        <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+      </div>
+    <div class="alignRightDepartureTime">
+      <h4 class="gray-text text-nowrap">06:30</h4>
+      <span class="smallDestination">BCD</span>
+    </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+    <div class="alignLeftDepartureTime">
+      <h4 class="gray-text text-nowrap">19:50</h4>
+      <span class="smallOrigin">MNL</span>
+    </div>
+    <div class="alignCenterDepartureTime">
+        <span style="font-size: 12px;">2h 15m</span>
+        <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+      </div>
+    <div class="alignRightDepartureTime">
+      <h4 class="gray-text text-nowrap">21:05</h4>
+      <span class="smallDestination">BCD</span>
+    </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+  <div class="alignLeftDepartureTime">
+    <h4 class="gray-text text-nowrap">19:25</h4>
+    <span class="smallOrigin">MNL</span>
+  </div>
+  <div class="alignCenterDepartureTime">
+      <span style="font-size: 12px;">1h 10m</span>
+      <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+    </div>
+  <div class="alignRightDepartureTime">
+    <h4 class="gray-text text-nowrap">06:50</h4>
+    <span class="smallDestination">BCD</span>
+  </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+<div class="alignLeftDepartureTime">
+  <h4 class="gray-text text-nowrap">21:15</h4>
+  <span class="smallOrigin">MNL</span>
+</div>
+<div class="alignCenterDepartureTime">
+    <span style="font-size: 12px;">1h 40m</span>
+    <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+  </div>
+<div class="alignRightDepartureTime">
+  <h4 class="gray-text text-nowrap">06:30</h4>
+  <span class="smallDestination">BCD</span>
+</div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+    <div class="alignLeftDepartureTime">
+      <h4 class="gray-text text-nowrap">19:50</h4>
+      <span class="smallOrigin">MNL</span>
+    </div>
+    <div class="alignCenterDepartureTime">
+        <span style="font-size: 12px;">2h 15m</span>
+        <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+      </div>
+    <div class="alignRightDepartureTime">
+      <h4 class="gray-text text-nowrap">21:05</h4>
+      <span class="smallDestination">BCD</span>
+    </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+  <div class="alignLeftDepartureTime">
+    <h4 class="gray-text text-nowrap">19:25</h4>
+    <span class="smallOrigin">MNL</span>
+  </div>
+  <div class="alignCenterDepartureTime">
+      <span style="font-size: 12px;">1h 10m</span>
+      <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+    </div>
+  <div class="alignRightDepartureTime">
+    <h4 class="gray-text text-nowrap">06:50</h4>
+    <span class="smallDestination">BCD</span>
+  </div>
+</div>
+<div id="searchresult-item" class="card rounded-top">
+<div class="alignLeftDepartureTime">
+  <h4 class="gray-text text-nowrap">21:15</h4>
+  <span class="smallOrigin">MNL</span>
+</div>
+<div class="alignCenterDepartureTime">
+    <span style="font-size: 12px;">1h 40m</span>
+    <img src="images/flightDuration.PNG" class="img-fluid" alt="Responsive image">
+  </div>
+<div class="alignRightDepartureTime">
+  <h4 class="gray-text text-nowrap">06:30</h4>
+  <span class="smallDestination">BCD</span>
+</div>
+</div>
+        
+
+      
+
+        <script src="js/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

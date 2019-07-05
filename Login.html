@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Login | EPAL express</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body>
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-light shadow" id="navBar">
+            <a class="navbar-brand" href="#">
+            <img src="images/logo.png" height="50" alt="">
+            </a>
+        </nav>
+        
+        <img src="images/logo.png" id="mobileLogo" alt="">
+
+        <div id="logincard" class="card rounded">
+            <div class="card-body">
+                    <form>
+                        <div id="loginspace"></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                    <span class="oi oi-person" id="loginUserIcon"></span>
+                            </div>
+                            <input type="text" name="" class="form-control input_user" value="" placeholder="Username">
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                    <span class="oi oi-lock-locked"  id="loginPasswordIcon"></span>
+                            </div>
+                            <input type="password" name="" class="form-control input_pass" value="" placeholder="Password">
+                        </div>
+                        <a href="#" id="actionButton" class="btn btn-danger w-100 rounded">Login</a>
+                        <div id="registerLink">
+                            <a href="#" id="registerLink"><b><h6>Register Now</h6></b></a>
+                        </div>  
+                    </form>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

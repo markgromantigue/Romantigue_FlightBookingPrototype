@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Search Flight | EPAL express</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body data-spy="scroll" data-target=".nav-item">
+      <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="logoAfter">
+          <img src="images/logo.png" height="50" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <div class="navButtons">
+                  <span class="oi oi-location navIcon"></span><br>
+                  Book
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-briefcase navIcon"></span><br>
+                      Check in
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-spreadsheet navIcon"></span><br>
+                      Status
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-person navIcon"></span><br>
+                      Profile
+                    </div>
+                  </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="navButtons">
+                      <span class="oi oi-calendar navIcon"></span><br>
+                      Trips
+                    </div>
+                  </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        
+        <img src="images/logo.png" id="mobileLogo" alt="">
+
+        <div id="fromPlace">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn gray-text" data-toggle="modal" data-target="#modalTo">
+              <div class="alignLeft">
+                From
+                <h2 id="fromAbbr">PHL</h2>
+                <h6 id="fromFull">Philippines</h6>
+              </div>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalTo" tabindex="-1" role="dialog" aria-labelledby="modalToTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalToTitle">Select origin</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <a href="#" data-dismiss="modal">
+                        <div id="modal-item" class="card rounded-top">
+                          Australia
+                          <input type="hidden" class="abr" value="AUS">
+                        </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Bahrain
+                            <input type="hidden" class="abr" value="BHR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Cambodia
+                            <input type="hidden" class="abr" value="KHM">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Canada
+                            <input type="hidden" class="abr" value="CAN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            China
+                            <input type="hidden" class="abr" value="CHN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Indonesia
+                            <input type="hidden" class="abr" value="IDN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Japan
+                            <input type="hidden" class="abr" value="JPN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Kuwait
+                            <input type="hidden" class="abr" value="KWT">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Malaysia
+                            <input type="hidden" class="abr" value="MYS">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            New Zealand
+                            <input type="hidden" class="abr" value="NZL">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Philippines
+                            <input type="hidden" class="abr" value="PHL">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Qatar
+                            <input type="hidden" class="abr" value="QAT">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Saudi Arabia
+                            <input type="hidden" class="abr" value="SAU">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Singapore
+                            <input type="hidden" class="abr" value="SGP">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            South Korea
+                            <input type="hidden" class="abr" value="KOR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Thailand
+                            <input type="hidden" class="abr" value="THA">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Turkey
+                            <input type="hidden" class="abr" value="TUR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            United Kingdom
+                            <input type="hidden" class="abr" value="GBR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            United States
+                            <input type="hidden" class="abr" value="USA">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item" class="card rounded-top">
+                            Vietnam
+                            <input type="hidden" class="abr" value="VNM">
+                          </div>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="arrowIndicator">
+          <span class="oi oi-arrow-right"></span><br>
+          <span class="oi oi-arrow-left" id="left-arrow-return"></span>
+        </div>
+        <div id="toPlace">
+          <button type="button" class="btn gray-text" data-toggle="modal" data-target="#modalFrom">
+            <div class="alignRight">
+                To
+                <h2 id="toAbbr">...</h2>
+                <h6 id="toFull">Select&nbsp;one</h6>
+            </div>
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalFrom" tabindex="-1" role="dialog" aria-labelledby="modalFromTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalFromTitle">Select Destination</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <a href="#" data-dismiss="modal">
+                        <div id="modal-item-to" class="card rounded-top">
+                          Australia
+                          <input type="hidden" class="abr" value="AUS">
+                        </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Bahrain
+                            <input type="hidden" class="abr" value="BHR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Cambodia
+                            <input type="hidden" class="abr" value="KHM">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Canada
+                            <input type="hidden" class="abr" value="CAN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            China
+                            <input type="hidden" class="abr" value="CHN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Indonesia
+                            <input type="hidden" class="abr" value="IDN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Japan
+                            <input type="hidden" class="abr" value="JPN">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Kuwait
+                            <input type="hidden" class="abr" value="KWT">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Malaysia
+                            <input type="hidden" class="abr" value="MYS">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            New Zealand
+                            <input type="hidden" class="abr" value="NZL">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Qatar
+                            <input type="hidden" class="abr" value="QAT">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Saudi Arabia
+                            <input type="hidden" class="abr" value="SAU">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Singapore
+                            <input type="hidden" class="abr" value="SGP">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            South Korea
+                            <input type="hidden" class="abr" value="KOR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Thailand
+                            <input type="hidden" class="abr" value="THA">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Turkey
+                            <input type="hidden" class="abr" value="TUR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            United Kingdom
+                            <input type="hidden" class="abr" value="GBR">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            United States
+                            <input type="hidden" class="abr" value="USA">
+                          </div>
+                      </a>
+                      <a href="#" data-dismiss="modal">
+                          <div id="modal-item-to" class="card rounded-top">
+                            Vietnam
+                            <input type="hidden" class="abr" value="VNM">
+                          </div>
+                      </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div id="searchcard-top" class="card rounded-top">
+          <a href="#" id="oneWay">
+            <div id="leftOption">
+              <div class="alignLeftTab">
+                <span>One way</span>
+              </div>
+              <div class="alignRightTab"></div>
+            </div>  
+          </a>
+          <a href="#" id="return">
+            <div id="rightOps">
+              <center id="rightOption" class="active-tab" style="height: 100%;">
+              <div class="alignRightTab"></div>
+              <div class="alignRightTab">
+                <span>Return</span>
+              </div>
+            </center>
+            </div>
+          </a>
+        </div>
+        <div id="searchcard-middle-upper" class="card rounded-top">
+            <a href="#" id="calIcon">
+              <div class="alignLeftDepartureDate">
+                <span class="gray-text">Departure date</span>
+                <h4 id="departureDateLabel">...</h4>
+              </div>
+            </a>
+            <a href="#" id="calIconReturn">
+              <div class="alignRightDepartureDate">
+                Return date
+                <h4 id="returnDateLabel">...</h4>
+              </div>
+            </a>
+        </div>
+        <div id="searchcard-middle-lower" class="card rounded-top">
+            <div class="alignLeftTabAdult">
+              <div class="alignTextCenter">
+                Adult<br>
+                <h1 class="adult">1</h1>
+                (12y+)
+              </div>
+            </div>
+            <div class="alignCenter">
+                <div class="alignTextCenter">
+                    Child<br>
+                    <h1 class="child">0</h1>
+                    (2y-11y)
+                  </div>
+            </div>
+            <div class="alignRightTabInfant">
+                <div class="alignTextCenter">
+                    Infant<br>
+                    <h1 class="infant">0</h1>
+                    (16d-23m)
+                  </div>
+            </div>
+            <div class="alignRightTabPlus">
+                <div class="alignTextCenter">
+                    <a href="" data-toggle="modal" data-target="#passengerModal"><span class="oi oi-plus" style="color:#4D85EC;"></span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="passengerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Choose the number of passengers</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table cellpadding="4">
+                  <tr>
+                    <td>Adult<br>(12+&nbsp;years&nbsp;old)</td>
+                    <td width="40%">&nbsp;</td>
+                    <td><a href="#" class="subtractAdult"><span class="oi oi-minus"></a></span></td>
+                    <td><h3 class="adult">1</h3></td>
+                    <td><a href="#" class="addAdult"><span class="oi oi-plus"></a></span></td>
+                  </tr>
+                  <tr>
+                    <td>Child<br>(2&nbsp;-&nbsp;12&nbsp;years&nbsp;old)</td>
+                    <td width="40%">&nbsp;</td>
+                    <td><a href="#" class="subtractChild"><span class="oi oi-minus"></span></a></td>
+                    <td><h3 class="child">0</h3></td>
+                    <td><a href="#" class="addChild"><span class="oi oi-plus"></span></a></td>
+                  </tr>
+                  <tr>
+                    <td>Infant<br>(<2&nbsp;years)</td>
+                    <td width="40%">&nbsp;</td>
+                    <td><a href="#" class="subtractInfant"><span class="oi oi-minus"></span></a></td>
+                    <td><h3 class="infant">0</h3></td>
+                    <td><a href="#" class="addInfant"><span class="oi oi-plus"></span></a></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="searchcard-bottom" class="card rounded-top">
+            <div class="alignLeftFlightClass">
+                <div class="alignTextCenter">
+                    <a href="#" class="flightClass active-link">Economy</a>
+              </div>
+              <div class="alignCenterFlightClass">
+                  <div class="alignTextCenter">
+                      <a href="#" class="flightClass">Premium<br>Economy</a>
+                    </div>
+              </div>
+              <div class="alignRightTabFlightClass">
+                  <div class="alignTextCenter">
+                      <a href="#" class="flightClass">Business</a>
+                    </div>
+              </div>
+        </div>
+        <div class="outsideButton">
+          <a href="#" id="actionButton" class="btn btn-danger w-100 rounded">Search</a>
+        </div>
+
+        <nav class="navbar fixed-bottom navbar-expand navbar-light bg-light" id="navbar-bottom">
+            <div class="navbar-collapse collapse">
+
+                <ul class="navbar-nav w-100 justify-content-center px-3" id="navClass">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          <div class="navButtons">
+                            <span class="oi oi-location navIcon"></span><br>
+                            Book
+                          </div>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-briefcase navIcon"></span><br>
+                                Check&nbsp;in
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-spreadsheet navIcon"></span><br>
+                                Status
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-person navIcon"></span><br>
+                                Profile
+                              </div>
+                            </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <div class="navButtons">
+                                <span class="oi oi-calendar navIcon"></span><br>
+                                Trips
+                              </div>
+                            </a>
+                      </li>
+                </ul>
+            </div>
+        </nav>
+
+        <script src="js/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
